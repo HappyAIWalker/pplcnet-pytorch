@@ -3,13 +3,6 @@ Welcome to MMDetection's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: 开始你的第一步
-
-   get_started.md
-   model_zoo.md
-
-.. toctree::
-   :maxdepth: 2
    :caption: 快速启动
 
    1_exist_data_model.md
