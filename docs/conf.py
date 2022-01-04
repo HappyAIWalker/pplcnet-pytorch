@@ -23,6 +23,7 @@ import sys
 from unittest import mock
 from sphinx.domains import Domain
 from typing import Dict, List, Tuple
+from recommonmark.parser import CommonMarkParser
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
@@ -137,7 +138,8 @@ extensions = [
     "sphinx.ext.coverage",
     "sphinx.ext.mathjax",
     "sphinx.ext.viewcode",
-    "sphinx.ext.githubpages",
+    "sphinx.ext.githubpages",    
+    "sphinx.ext.imgmath",
     'sphinx_markdown_tables',
 ]
 
@@ -166,6 +168,10 @@ intersphinx_mapping = {
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
 
+source_parsers = {
+    '.md': CommonMarkParser
+
+}
 source_suffix = [".rst", ".md"]
 
 # The master toctree document.
